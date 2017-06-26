@@ -30,12 +30,17 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
 
+  // The magic enum to end our pain and suffering!
+  // For the most part the order of our cases do not matter.
+  // What is important is that our first case is set to 0, and that our last case is always `total`.
   enum TableSection: Int {
     case action = 0, comedy, drama, indie, total
   }
 
+  // This is the size of our header sections that we will use later on.
   let SectionHeaderHeight: CGFloat = 25
 
+  // Data variable to track our sorted data.
   var data = [TableSection: [[String: String]]]()
 
   override func viewDidLoad() {
@@ -48,6 +53,7 @@ class ViewController: UIViewController {
     tableView.reloadData()
   }
 
+  // When generating sorted table data we can easily use our TableSection to make look up simple and easy to read.
   func sortData() {
     data[.action] = MovieData.filter({ $0["genre"] == "action" })
     data[.comedy] = MovieData.filter({ $0["genre"] == "comedy" })
@@ -59,6 +65,8 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
+  // As long as `total` is the last case in our TableSection enum,
+  // this method will always be dynamically correct no mater how many table sections we add or remove.
   func numberOfSections(in tableView: UITableView) -> Int {
     return TableSection.total.rawValue
   }
@@ -125,4 +133,3 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
   }
 
 }
-

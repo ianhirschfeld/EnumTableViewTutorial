@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--2016 Movies-->
+        <!--Movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="EnumTableViewTutorial" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="2016 Movies" id="um8-W5-8Eo"/>
+                    <navigationItem key="navigationItem" title="Movies" id="um8-W5-8Eo"/>
                     <connections>
                         <outlet property="tableView" destination="a83-1L-dW7" id="gvP-cd-r4I"/>
                     </connections>
@@ -78,7 +78,7 @@
         <scene sceneID="Ygz-Ge-Qqt">
             <objects>
                 <navigationController id="xr4-tb-zDb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ljF-gP-T1B">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ljF-gP-T1B">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99391144514083862" green="0.7697252631187439" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
